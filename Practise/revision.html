@@ -1,0 +1,254 @@
+Type ctrl + u to view source code of any browser
+
+<!DOCTYPE html>
+<html lang="en"> <!-- for declearing language of the document we use if-->
+
+
+<head>
+    <!-- This is the same area where we would link to css files and other resources-->
+
+    <meta charset="UTF-8"> <!-- it is the standard for all web pages-->
+
+    <meta git="viewport" content="width=device-width, initial-scale=1.0"> <!-- meta data is put inside head -->
+
+    <meta name="description" content=" This page contain all the things i am learning how to create as i learn html">
+    <!-- this give more discription about our page , this information could be picked up in a search engine or other service that wants to learn more about our web page -->
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <!-- rel means relation or relate (how does this relate to the web page)-->
+    <!-- here href refers to back to html that stands for hypertext reference. we are refrencing a resource(photos,css etc) in it -->
+    <!--we are doing favicon so to put the small image like logo of our website-->
+
+    <link rel="stylesheet" href="./practise.css" />
+
+    <title>Document</title>
+
+
+    <!--style element that allows to put some quick css-->
+    <style>
+        html {
+            font-size: 22px
+        }
+
+        body {
+            background-color: #333;
+            color: whitesmoke;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="#Radha"> click for Radha-Rani</a>
+            </li>
+
+            <li>
+                <a href="#Krishna"> click for Krishna</a>
+            </li>
+        </ul>
+
+    </nav>
+
+
+    <!--Headers do have semantic imp, that give meaning to our content-->
+
+    <h1> GO HTML (main topic)</h1> <!-- the biggest heading we could put. we only put one h1 element per page-->
+
+    <h2> TOPIC 1 </h2> <!--This is the sub heading-->
+    <p> these things are getting intresting day by days </p> <!-- writing a paragraph for this above sub heading-->
+    <!-- h1>h2>h3   -->
+
+    <hr> <!--hr(horizontal rule) la horizontal line banaidinxa-->
+
+    <h3> Topic 2</h3>
+    <p> hehehe
+        <!-- here i gave space and write two word but in page they come near. Therefore white space collapsing will not last-->
+        nnnnn <!-- But we can do line break in <P> by using <br> function-->
+        <br> ....hehehe
+        <br> ....nnnnnn
+        <br> &nbsp;&nbsp;&nbsp;&nbsp;hehehe <!-- &nbsp creates a space -->
+        <br> &nbsp;&nbsp;&nbsp;&nbsp;nnnnnn
+
+        <br> <em> Hare Krishna </em> <!-- em is a inline element that provides the semantic meaning-->
+        <br> <strong> Hare Krishna</strong>
+        <!-- strong is also a inline element that make the contents bigger and bolder-->
+
+        <hr>
+
+    <h4>Topic 3</h4>
+    <!-- header and paragraph are block level element-->
+    &lt; &gt; &copy;Ankit <!-- &lt means less and &gt means greater and &copy means give copy sign-->
+
+    </p>
+
+    <br> &nbsp;&nbsp;&nbsp; I USE RESOURCES FROM <abbr title="YOUTUBE">YT</abbr>
+    <!-- It is used to give the abbrevation -->
+    <address> Vrindawan </address> <!-- It tell the browser this is the address -->
+
+    <!--  Order list<ol> and unorder list <ul> -->
+
+    <ol>
+        <li>hi</li> <!-- li means list and use code li*x for shortcut where x is any number-->
+        <li>Hello</li>
+        <li> you are fellow</li>
+    </ol>
+
+    <ul>
+        <li>dutyfull</li>
+        <li>are always</li>
+        <li>Beautifull</li>
+    </ul>
+
+
+    <hr>
+    <h5> Topic 4</h5>
+
+    <!--  Description list is used to describe any term in detail-->
+    <!-- (its format is in : <dl> <dt></dt> <dd></dd> </dl>) where dl is description list,dt is description term and dd is description detail  -->
+
+    <dl>
+        <dt>Coding</dt>
+        <dd> coding is like a typewriting only. Nothing more than else</dd>
+    </dl>
+
+
+    <!-- Anchor tag: THis tag is used to create a link to another page on the web.In HTML, when using the <a> (anchor) tag to create a hyperlink, the href attribute specifies the destination of the link. This destination can be defined using either an absolute reference or a relative reference.
+
+-->
+    <a href="practise.html"> Click here you fool</a> <!-- RELATIVE -->
+    <br> <a href="https://www.facebook.com/"> <abbr title="FaceBook">FB</abbr></a> <!-- ABSOLUTE -->
+
+
+
+    <hr>
+    <h6> Topic 5 </h6>
+
+    <!--                                           INTERNAL REFRENCE   
+     Semantic Html element is an element that clearly describes its meaning both to the browser and developers by its name.
+     EG:
+     <header>: represent the header of page
+        <nav>: represents a navigation links
+        <section>: represents a standalone section of content
+            
+  
+                Note:  By putting section with id we have created destination for each of the link we want to create .<section id"">
+-->
+
+    <!-- Scroll up you will find the nav function -->
+
+    <section id="Radha">
+        <h> Learn About Radha</h>
+        <p> She is an eternal and internal potency of Krishna
+            <br> Radharani always wants to make krishna happy because she is the internal energy(prakriti) of Krishna
+            <br> she had a golden complextion
+        </p>
+    </section>
+    <section id="Krishna">
+        <h> Learn About Krishna</h>
+        <p> Krishna is a Adipurusha
+            <br> He is the only supreme enjoyer of all this creation and always wants to enjoy with his internal potency
+            i.e Radharani
+            <br> He had a dark bluish complextion
+        </p>
+    </section>
+
+
+    <!--  Changes in anchor tag by using css
+    
+      a{
+    color: aliceblue;
+     }
+    a:hover,a:active{
+    color: blue;
+      }
+-->
+
+<p>
+    <a href="#"> tala dekhi MAthi</a> <!-- anchor tag ko href ma # use garera yesma vhako content lai click garyo vhaney yeslay page lai mathi scroll garaidinxa-->
+</p>
+<hr>
+
+<h7>Topic 6</h7>
+
+
+<!-- to make download any photos by clicking-->
+<ul>
+    <li> Download photo<a href="../1000046632.jpg" download> Click HEre </a></li>
+</ul>
+
+<!-- Email-->
+ <ul>
+    <li> Contact me at<a href="mailto:notankitff@gmail.com" > My email address </a></li>  <!--you should add "mailto:" before the email inside the href-->
+</ul>
+
+<!-- Phone-->
+ <ul>
+    <li> Dial <a href=" tel:+9864453607" > My Phone number</a></li>
+</ul>
+
+<!-- google-->
+ <ul>
+    <li> Dial <a href="https://www.google.com " target="_blank"> Google</a></li> <!-- here we added https:// before our  google link-->
+</ul>
+
+<p>
+    <a href="/">Back to Home</a> <!-- if we click this link then it will load the page by default -->
+</p>
+</body>
+<hr>
+
+
+<h8>Topic 7</h8>
+<!-- alt: to write something about the photo for those whose photo in not loading in the web 
+ In img loading the eager is default function whether you use it or not, but when there are many photo instead of "eager" the  "Lazy" is used
+  -->
+ <!-- figure: it helps to get some auto formatting and to got the image indented inside the figure.It is not only used for image but for another purpose also-->
+
+  <figure>
+<img src="../1000046632.jpg" alt="photo of my" title="This is me Ankit :3" width="300" breadth="250"  img loading="eager">
+<figcaption> hi i am in kathmandu now</figcaption>
+</figure>
+
+<!-- code element helps you actually display code-->
+<figure>
+    <figcaption>AN EG OF HTML</figcaption>
+    <p><code>&lt;h1 &gt; Hello World! &lt;/ h1 &gt; </code></p>
+</figure>
+
+<!-- aside,detail,summary is a semantic element
+the arrow-like symbol (▶ or ▼) that appears in your example is not because of the <aside> element. It is because of the <details> and <summary> tags 
+-->
+<aside>
+  <details>
+    <summary>What does my name start with?</summary>
+    <p>Maybe from A or K</p>
+  </details>
+</aside>
+<!--mark is used to highlight the text-->
+<p> you should always chant the holy name of <mark>Govinda</mark></p>
+
+
+<hr>
+<h9>Topic 8</h9>
+<!-- 
+The <header>, <main>, and <footer> elements in HTML are semantic elements. 
+    <header>	For top navigation and intro content
+    <main>	To highlight the central and unique content
+    <footer>	For closing info, credits, or extra links at the bottom   
+    Using these tags makes code easier to understand and maintain, and also helps search engines and screen readers understand the layout and importance of content.
+-->
+
+
+<!--
+Article is same like of section element.
+Article has a clear topic that the area is about where a section is more generic.
+Inside of the article we could create other article
+-->
+
+<article> hello</article>
+</html>
