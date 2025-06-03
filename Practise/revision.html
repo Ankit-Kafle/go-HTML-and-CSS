@@ -210,7 +210,7 @@ Type ctrl + u to view source code of any browser
  <!-- figure: it helps to get some auto formatting and to got the image indented inside the figure.It is not only used for image but for another purpose also-->
 
   <figure>
-<img src="../1000046632.jpg" alt="photo of my" title="This is me Ankit :3" width="300" breadth="250"  img loading="eager">
+<img src="../images/1000046632.jpg" alt="photo of my" title="This is me Ankit :3" width="300" breadth="250"  img loading="eager">
 <figcaption> hi i am in kathmandu now</figcaption>
 </figure>
 
@@ -232,6 +232,16 @@ the arrow-like symbol (▶ or ▼) that appears in your example is not because o
 <!--mark is used to highlight the text-->
 <p> you should always chant the holy name of <mark>Govinda</mark></p>
 
+<!--
+< time  date time=""> </time> [ add meaning to the text]
+
+<div> </div>  [ it is like a section and it was use in old days and it has no semantic meaning]
+
+<span> </span> [ It is used to wrap a word in a paragraph, It don't change or add any value to our code, It is use while using css]
+
+-->
+
+
 
 <hr>
 <h9>Topic 8</h9>
@@ -251,4 +261,70 @@ Inside of the article we could create other article
 -->
 
 <article> hello</article>
+<p>
+<table style="border-collapse:collapse;width: 100%" border="1">
+<thead>
+    <tr>
+        <th colspan="5"> Chess Multiple Campus</th>    <!-- colspan la horizantally span garera table banauxa-->
+        <th rowspan="5"> THE GRAND MASTERS</th>   <!-- rowspan la vertically span garera table banauxa-->
+    </tr>
+    </thead>
+
+<tbody>
+<!-- th means table head which is used for heading contents of the table-->
+<!-- tr means table row and td means table data-->
+    <tr>
+        <th scope="col" id="S.N"> S.N</th>
+        <th scope="col" id="Name"> Name</th>
+        <th scope="col" id="Class"> Class</th>
+        <th scope="col" id="Amount">Amount</th>
+
+<!-- we can use scope="row" if our heading is situated in row side
+     This tag scope,id,thead,tbody,tfoot etc don't change the look on the page but,
+      we have really helped the assistive technology to navigate our table -->
+
+    </tr>
+
+<tr>
+        <td> 1</td>
+        <td> Gukesh</td>
+        <td> 11</td>
+        <td>500</td>
+</tr>
+<tr>
+<td> 2</td>
+        <td> mukesh</td>
+        <td> 11</td>
+        <td>600</td>
+        
+</tr>
+</tbody>
+    <tfoot>
+<tr>
+    <td colspan="4">TOTAL:</td>
+</tr>
+</tfoot>
+
+   </p> 
+</table>
+
+<p>
+    <hr>
+</p>
+
+<h10>Topic 9</h10>
+
+
+
+
+
+
+
+<form action="#" method="get">
+    <p>
+        <label for="phone">Phone:</label>
+        <input type="tel" name="phone" id="phone" placeholder="5555555555" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
+    </p>
+</form>
+
 </html>
