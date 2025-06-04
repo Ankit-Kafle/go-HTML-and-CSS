@@ -324,6 +324,8 @@ Inside of the article we could create other article
     <h2> Contact me</h2>
     <p> I'd really like to hear from you! </p>
     <form action="https://httpbin.org/get" method="get"> <!--slash get refers to the method we are going to use-->
+        <fieldset>
+            <legend> LEArning NEW</legend>
         <label for="firstName">First Name:</label> <!-- CamelCase should be -->
          <!-- id is the one that should be absolutely to match the value of the for in the label-->
 
@@ -396,9 +398,103 @@ Inside of the article we could create other article
         <option value="others">
     </datalist>
  </p>
+</fieldset>
 
+<p> <hr> </p>
+
+<h11> Topic 10</h11>
+
+<!-- When the forms get large sometime it's good to organize it into different section, Section that say what each part of the form is about -->
+
+<!-- radio buttons they all have the same value for the name attribute because we should only be able to select one of these so when we select one the other choice should not be selected and thats what we achieve by giving them all the same name for the i/p-->
+
+<p>
+    <fieldset>
+    <legend> What is your Favourite Food ?</legend>
+    <p>
+        <input type="radio" name="food" id="tacos" value="tacos">
+        <label for="tacos"> Tacos </label>
+    </p>
+    <p>
+        <input type="radio" name="food" id="pizza" value="pizza">
+        <label for="pizza"> Pizza </label>
+    </p>
+    <p>
+        <input type="radio" name="food" id="other" value="other">
+        <label for="other"> other </label>
+    </p>
+    </p>
+</fieldset>
+
+<!-- we can select more than one at once in checkbox-->
+
+<br>
+<fieldset>
+    <legend>DO you have Pets ?</legend>
+    <p>
+        <input type="checkbox" name="pets" id="dog" value="dog">
+    <label for="dog">DOG</label>
+    </p>
+
+    <p>
+        <input type="checkbox" name="pets" id="cat" value="cat">
+    <label for="cat">CAT</label>
+    </p>
+
+    <p>
+        <input type="checkbox" name="pets" id="fish" value="fish">
+    <label for="fish">Fish</label>
+    </p>
+
+    <p>
+        <input type="checkbox" name="pets" id="otherpets" value="otherpets">
+    <label for="otherpets">Others</label>
+    </p>
+</fieldset>
+
+<br> <fieldset>
+    <legend> Send ME A Note</legend>
+    <label for="message"> Your Message:</label>
+    <br> <!-- now for input we have to do -->
+    <textarea name="message" id="message" cols="30" rows="10" placeholder="Type your msg here"></textarea>
+
+
+</fieldset>
+
+<!-- <br>
+<input type="submit" value="submit">  it is also like a button but the main difference here is that it only takes a text value -->
+
+<br>
+<button type="submit">Submit</button>
+<button type="reset">Reset</button>
+
+
+<button type="submit" formaction="https://httpbin.org/post" formmethod="post">Post</button>
+<!-- Note: This will allow us to submit the same information with a post instead of a submit.
+ 
+We never want to send sensitive information with a (get request) because we can see all the information of our which we have submitted in URL-->
 </form>
 </article>
 
-
 </html>
+
+<!-- hello my friend if you look all around upto last to my revision file
+ thank you very much
+ it was my github second project which took me many hours to practise
+ the first project was obviously the practise for github project
+ i have learn all this thing from the youtube
+ and the youtuber name was Dave Gray
+ You can also learn from him and subscribe him also
+ and i have added all those thing which i have learn about html here
+ 
+ At Last 
+
+ list but not more
+For me 
+  plz chant the holy name 
+
+ HARE KRISHNA HARE KRISHNA 
+ KRISHNA KRISHNA HARE HARE 
+HARE RAMA HARE RAMA 
+RAMA RAMA HARE HARE
+                          and be happy -->
