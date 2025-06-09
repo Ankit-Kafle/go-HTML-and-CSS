@@ -3,3 +3,103 @@
 
 /* Topic 1 */
 
+/*There are 3 different way to apply CSS to our document i.e
+1.) External Style Sheet  2.)Internal Style Sheet  and 3.) Inline css with an element */
+
+p4{
+    color: greenyellow;
+}
+
+
+/* The inlined CSS take precedent over either type of style sheet internal or external because its applied directly to the element itself */
+
+/* best commonly used method for using css is external style sheet,it keep our css code completely seperate from our html */
+
+/*Topic 2*/
+
+/* There are 3 type of basic selector in CSS i.e
+
+1> Element Selector  2>class selector  3> id selector*/
+
+/*Element Selector example*/
+body{
+    font-size: 22px;
+
+}
+p2{
+    color:blue;
+    font-size: 64px;
+}
+
+/*Class Selector examples*/
+
+.Ankit{
+    color: orange;
+}
+
+/*id selector*/
+
+#third{
+    font-style: italic;
+}
+
+h1,h2{
+    color:blueviolet;
+}
+
+/* However,it is not good practise to really use id inside of your CSS now it will validate your code has no problem using an id */
+
+/*However typically we should use classes and sometime element selector but rarely id selector*/
+
+/* This means selector is looking for any h2 that exist inside of an h1. so it doesnot work*/
+h1 h2 {
+    color:aqua;
+}
+
+/*Selecting an element thats inside another element*/
+
+section span{
+    text-transform: uppercase;
+    background-color: gold;
+}
+
+.highlight{
+    text-transform: uppercase;
+    background-color: rosybrown;
+}
+/* This would keep our css much more organized and actually more reusable, it is more flexible this way because we might have same span elements doing other things that we did not want to apply this rule set too*/
+
+
+/*              TOPIC 3                 */
+/* Universal Selector */
+
+/* This means it's selecting everything on the page*/
+*{
+    font-family: monospace;
+}
+
+/* CSS is an acronym for cascading style sheets ( it means css work like a waterfall i.e it work from top to down */
+ 
+.hero{
+    color:aquamarine;
+}
+
+
+p{
+    color: red;
+}
+/* But cascading don't work when in the above case, as we can see that class have more specificity than an element selector*/
+
+
+/*Inheritance = That is where another element inherits the settings from or the parent element, so the body element is parent to every other element*/
+
+/* 
+body {
+font-size: 22px;            it is inheritance
+border: 3px solid black;     it is Non inheritance
+}  */
+
+/*we want to write less code and be more efficient and inheritance helps us to do that.
+form element do not inherit*/
+
+
