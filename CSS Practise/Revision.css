@@ -6,7 +6,7 @@
 /*There are 3 different way to apply CSS to our document i.e
 1.) External Style Sheet  2.)Internal Style Sheet  and 3.) Inline css with an element */
 
-p4{
+p4 {
     color: greenyellow;
 }
 
@@ -22,29 +22,26 @@ p4{
 1> Element Selector  2>class selector  3> id selector*/
 
 /*Element Selector example*/
-body{
-    font-size: 22px;
-
-}
-p2{
-    color:blue;
+p2 {
+    color: blue;
     font-size: 64px;
 }
 
 /*Class Selector examples*/
 
-.Ankit{
+.Ankit {
     color: orange;
 }
 
 /*id selector*/
 
-#third{
+#third {
     font-style: italic;
 }
 
-h1,h2{
-    color:blueviolet;
+h1,
+h2 {
+    color: blueviolet;
 }
 
 /* However,it is not good practise to really use id inside of your CSS now it will validate your code has no problem using an id */
@@ -53,41 +50,41 @@ h1,h2{
 
 /* This means selector is looking for any h2 that exist inside of an h1. so it doesnot work*/
 h1 h2 {
-    color:aqua;
+    color: aqua;
 }
 
 /*Selecting an element thats inside another element*/
 
-section span{
+section span {
     text-transform: uppercase;
     background-color: gold;
 }
 
-.highlight{
+.highlight {
     text-transform: uppercase;
     background-color: rosybrown;
 }
+
 /* This would keep our css much more organized and actually more reusable, it is more flexible this way because we might have same span elements doing other things that we did not want to apply this rule set too*/
 
-
-/*              TOPIC 3                 */
 /* Universal Selector */
 
 /* This means it's selecting everything on the page*/
-*{
+* {
     font-family: monospace;
 }
 
 /* CSS is an acronym for cascading style sheets ( it means css work like a waterfall i.e it work from top to down */
- 
-.hero{
-    color:aquamarine;
+
+.hero {
+    color: aquamarine;
 }
 
 
-p{
-    color: red;
+p {
+    color: #ff0000;
 }
+
 /* But cascading don't work when in the above case, as we can see that class have more specificity than an element selector*/
 
 
@@ -100,6 +97,229 @@ border: 3px solid black;     it is Non inheritance
 }  */
 
 /*we want to write less code and be more efficient and inheritance helps us to do that.
-form element do not inherit*/
+Form element do not inherit*/
+
+/*Topic 3*/
+body {
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    background: papayawhip;
+    /* color: rgb(255, 0,0);         /* [ if (0,0,0) then it will become black and if (255,255,255) then it will become white] */
+
+}
+
+/* There is rgba which adds an alpha channel and this alpha channel guides the transparency */
+#a1 {
+    color: rgba(0, 0, 255, 0.5);
+    /* Note that the alfa have value upto 0-1 not 0-255*/
+}
+
+/*Hexadecimal which is a common way to specify colors. It works like rgb and it has its own way of coding the values. Through it goes from 0 to 9 and then also uses letters a through f  */
+
+#a2 {
+    color: #123456
+        /* The lowest value is 000000(000) and the highest value is FFFFFF(FFF) */
+}
+
+/* FF0000 it is red,000 black, 808080 is gray */
+
+/* Topic 4*/
+
+/* CSS units determine the size of everything in our page. It is of two categories i.e relative and absolute */
+
+header {
+    width: 80%;
+}
+
+/* If the width of parent class i.e header is 80% than we are only using up to 50% of 80% of the pg*/
+h3 {
+    border: 2px dashed red;
+    width: 50%;
+}
+
+/* rem: This is the unit that we'll typically used for fontsize and it relates to the fontsize of root element  */
+/* we shouldn't set a font size on the root element. So for HTML element(root element) we typically wouldn't set a font size because we want to let the browser handle that and set the default font size*/
+
+main {
+    font-size: 3rem;
+}
+
+#a3 {
+    font-size: 1.5rem;
+}
+
+/*  It's not relative to the parent,it is relative to the root which is defined by browser. Using the rem and always looking at the root definitely help*/
+
+/* When we set the font size on an element, em doesn't looks at the parent it looks at the element itself and so we could use it for something like margin and padding */
+
+h3 {
+    font-size: 3rem;
+    /* 1em= the font-size of the parent element*/
+    padding: 0.5em;
+}
+
+/*Both em and rem are relative units in CSS, used mainly for:
+(Fonts,Padding,Margin,Widths/Heights,Media queries, etc.)
+
+✅ em – Relative to Parent Element
+
+1em = the font-size of the parent element
+Useful for creating scalable layouts that adjust based on where they are used
+Nested ems multiply
+it is inherited
+
+Example:
+body {
+  font-size: 16px;
+}
+
+.container {
+  font-size: 2em; /* 2 × 16px = 32px
+ } */
 
 
+
+/* ✅ rem – Relative to Root Element
+
+1rem = the font-size of the <html> element
+"rem" = "root em"
+Easier to control globally and prevents nesting issues
+not inherited
+
+Example:
+
+html {
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 2rem; /* 2 × 16px = 32px 
+}
+
+p {
+  font-size: 1rem; /* 1 × 16px = 16px 
+}
+
+use rem for base sizing, like font-size, padding, etc., where consistency is key.
+Use em when you want components to scale based on their container. */
+
+
+
+/* ch is a length unit. The 1ch is equal to the width of the "0"zero character of the current font*/
+
+/*
+1. Input field width: 
+  
+input {
+   width: 20ch;
+}
+ This sets the width of the input box to fit approximately 20 characters
+ 
+ 2. Text containers
+ 
+ p{
+ max-width: 60ch;
+}
+ Limit paragraph width to roughly 60 characters per line for better readability
+*/
+#a4 {
+    width: 40ch;
+}
+
+/* vw ( Viewport Width) = 1% of viewport's width
+   vh ( Viewport Height) = 1% of viewport's height*/
+
+/* main{
+    width: 50vw;                     
+    background-color: skyblue;  
+    }  */
+/* Most of the time we use % of vw */
+/* The width of our paragraph is actually wider tham the width of our main element. we have actually set
+    the main element to 50% of the width of the full page*/
+
+
+
+/*    we will get scroll bar on the bottom. If 100 percentage(%) then not get scroll bar on the bottom
+
+   body{
+    width:100vw;
+   }
+    
+   */
+
+body {
+    min-height: 100vh;
+    /* This will allow the body to grow with the content if it outgrows the viewport but at the same time it's now the full page*/
+}
+
+
+/* Topic 5 */
+/* CSS Box Model*/
+h4 {
+    border: 2px dashed red;
+    width: 400px;
+    font-size: 3rem;
+    padding: 0.5em;
+
+}
+
+/* css reset */
+/* *{
+    margin: 0;
+    padding: 0;
+      box-sizing: border box; [ Border box really helps us to calculate the sizes that we are assigning ]
+      box-sizing: content box; [ content box help to setting the size of the content only. It doesn't include calculating size of the padding or border margin at all ]
+   } 
+    */
+h5 {
+    margin: 1.5em 2em 2em 5em;
+    /* margin-top= 1.5em;
+        margin-right= 2em;
+        margin-bottom= 2em;
+        margin-left= 2em;
+      */
+    padding: 1.5em 2em 2em 2em;
+    border: 2px dashed purple;
+    /* border-top: 5px solid green;
+    border-right: 10px dotted blue; */
+    border-top-style: red;
+    border-top-width: 5px;
+    border-top-color: blue;
+
+/* Outline: It is not part of the box model, difference between outline and border is that it doesnot take up space */
+outline: 5px solid purple;
+outline-offset: 5px;          /*Pushed 5px further out from our border . We can also put -ve value i.e -20px etc*/
+
+
+}
+
+#circle{
+    margin:3rem auto;
+    background-color: gold;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #000;
+    border-radius: 50px;
+    outline: 2px solid red;
+    outline-offset: 0.25rem;
+}
+
+
+/*Topic 6*/
+
+/* we have made form in html and we can see that inheritance is seen in label but not in i/p and button*/
+
+/* Text settings*/
+div{
+    text-decoration: underline;   /* we can also do overline,underline,line-through and none*/
+    text-transform: capitalize;   /* we can also do lowercase,uppercase*/
+    text-align: justify;          /* justify make left and right equal and we can also use left,right also*/
+    text-indent: 2cm;
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+    word-spacing: 1em;
+    font-weight: 900 ;   /*for boldness*/
+    font-style: oblique; /*strong italic*/
+    font-family: sans-serif;
+}
