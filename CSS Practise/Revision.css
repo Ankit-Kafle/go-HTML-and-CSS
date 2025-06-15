@@ -287,15 +287,16 @@ h5 {
     border-top-width: 5px;
     border-top-color: blue;
 
-/* Outline: It is not part of the box model, difference between outline and border is that it doesnot take up space */
-outline: 5px solid purple;
-outline-offset: 5px;          /*Pushed 5px further out from our border . We can also put -ve value i.e -20px etc*/
+    /* Outline: It is not part of the box model, difference between outline and border is that it doesnot take up space */
+    outline: 5px solid purple;
+    outline-offset: 5px;
+    /*Pushed 5px further out from our border . We can also put -ve value i.e -20px etc*/
 
 
 }
 
-#circle{
-    margin:3rem auto;
+#circle {
+    margin: 3rem auto;
     background-color: gold;
     width: 100px;
     height: 100px;
@@ -311,15 +312,219 @@ outline-offset: 5px;          /*Pushed 5px further out from our border . We can 
 /* we have made form in html and we can see that inheritance is seen in label but not in i/p and button*/
 
 /* Text settings*/
-div{
-    text-decoration: underline;   /* we can also do overline,underline,line-through and none*/
-    text-transform: capitalize;   /* we can also do lowercase,uppercase*/
-    text-align: justify;          /* justify make left and right equal and we can also use left,right also*/
+div {
+    text-decoration: underline;
+    /* we can also do overline,underline,line-through and none*/
+    text-transform: capitalize;
+    /* we can also do lowercase,uppercase*/
+    text-align: justify;
+    /* justify make left and right equal and we can also use left,right also*/
     text-indent: 2cm;
     line-height: 1.5;
     letter-spacing: 0.1em;
     word-spacing: 1em;
-    font-weight: 900 ;   /*for boldness*/
-    font-style: oblique; /*strong italic*/
+    font-weight: 900;
+    /*for boldness*/
+    font-style: oblique;
+    /*strong italic*/
     font-family: sans-serif;
+}
+
+/* Topic 7 */
+
+/* This is anchor selector*/
+a {
+    text-decoration: none;
+    /* cursor: not-allowed; */
+    color: black;
+    background: lightcoral;
+
+}
+
+/* PSEUDO CLASS: It represent the current status of the element because a state of an anchor element can change */
+
+
+/* When a user clicks on a link and visits that URL, the browser remembers it.
+
+On pages where the same link appears again, :visited lets you apply a different style to show that it’s been visited */
+
+a:visited {
+    color: purple;
+}
+
+a:hover,
+a:focus {
+    color: dodgerblue;
+}
+
+a:active {
+    color: pink;
+}
+
+/* we should keep all these pseudo class are in proper order*/
+
+/* Topic 8*/
+
+/*List Style*/
+ol {
+    list-style-type: decimal;
+    /* padding: 0; */
+    text-align: center;
+    list-style-position: inside;
+    /* list-style-image: url(); */
+    /* list style: square url("img") inside*/
+    /* all the three properties (type,img,position) in one i.e shorthanded */
+}
+
+ul {
+    list-style-type: square;
+    text-align: center;
+    color: purple;
+    list-style-position: inside;
+    /* it can be either inside or outside according to the browser */
+}
+
+/*
+changing all list item
+
+li{
+color: red;
+}
+
+*/
+
+/*
+changing list section of unorder list
+
+ul li{
+color: red;
+}
+
+*/
+
+ul li:nth-child(2) {
+    /* we can also put even/odd in that number inside the bracket*/
+
+    color: black;
+}
+
+/* Pseudo Element(marker) : we can change something about the markers and that's usually what we would have here for bullet or letters outside of an order list or numbers. It start with :: (two colons) */
+
+
+ol ::marker {
+    color: blueviolet;
+    font-family: fantasy;
+    font-size: 1em;
+    content: "only $ 5              ";
+
+}
+
+
+/* Topic 9 */
+
+/* CSS Display Property */
+/*Automatically block level elements have a default 100% width and they stack top of each other.They also have some default margin. main is also a block element */
+
+.hi {
+   
+    background-color: lightcoral;
+    color: aqua;
+    padding: 1rem;
+
+}
+    /*
+    These function are not working in these inline element span, to make it work we have to use --> display: inline-block
+    
+    margin-top: 100px;
+    height: 200px; */
+
+    /* Topic 10 */
+/* FLOAT AND CLEARS TUTUORIAL */
+
+/* Float are used to float the things to the left and the right really any element that we want to and we can wrap text arount it and also we can use the floats inside of a container 
+It pulls an element to the left or right of its container, and allows inline content (like text or images) to wrap around it.Floats were commonly used for layout before Flexbox and Grid, but now they are mostly used for wrapping text around images.
+
+*/
+
+.block{
+    width:30vw;
+    height: 30vw;
+    background-color: #000;
+    color: #fff;
+    padding: 0.01rem;
+}
+
+.left{
+    float: left;
+    margin-right: 1rem;
+}
+.right{
+    float: right;
+    margin-right: 1rem;
+}
+   
+
+/* The clear property prevents elements from flowing next to floated elements, forcing them to appear below the float.
+
+🧠 Common Values:
+none (default): Allows elements to appear next to floats.
+
+left: Moves the element below any left-floated elements.
+
+right: Moves the element below any right-floated elements.
+
+both: Moves the element below both left and right floated elements.
+
+inherit: Inherits the value from its parent. */
+/* .clear{
+    clear:both;   
+   } */
+
+   .look{
+    background-color: bisque;
+    border: 1px solid black;
+    padding: 1rem;
+    display: flow-root;
+   }
+
+
+   /* Topic 11
+   CSS COLUMN */
+
+   .columns{
+    column-count: 4;               /* 4 ota column part garaidinxa*/
+    column-width: 250px;            /* imp thing is that the width should essentially never be less than 250 px per coloumn*/
+
+
+    /*columns: 4 250px;        it is a short hand method*/
+ column-rule: 3px solid black;
+ column-gap:  3rem;        /*column haru bich gap banauxa*/
+   }
+
+   
+   .columns .head{
+    margin-top: 0;
+    background-color: black;
+    color: #fff;
+    padding: 0.5rem;
+    break-inside: avoid;  /* heading lai 2 part ma break huna bata avoid garxa*/
+    break-before: column; /* heading lai column ko top ma matra rakhdinxa*/
+   }
+
+   .column,.quote{
+    font-size: 3rem;
+    text-align: center;
+    color: #000;
+    column-span: all;
+    margin-top: 2rem;
+
+   }
+
+   .columns p{
+    margin-top: 0;
+   }
+
+   
+.nowrap{
+    white-space: nowrap;
 }

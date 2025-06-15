@@ -1,79 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+
     <link rel="stylesheet" href="./Revision.css">
 
-     <style>
-p3 {
-    color: red;
-}
-p4{
-    color: pink;
-}
-</style> 
-</head>
-<body>
-    
-<h1> Topic 1</h1>
-<!--Eg for external sheet css-->
-<p1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis sapiente ratione, saepe, neque dicta omnis nostrum doloremque nam ut distinctio tempora maxime! In, rem. Incidunt magnam id magni tenetur delectus?</p1>
-<br>
-<p2>My Name is Ankit Kafle and whats yours</p2>
+    <style>
+        p3 {
+            color: red;
+        }
 
-<hr>
-<!--Eg for internal sheet css ie using <style> element in head section-->
-    
+        p4 {
+            color: pink;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1> Topic 1</h1>
+    <!--Eg for external sheet css-->
+    <p1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis sapiente ratione, saepe, neque dicta omnis
+        nostrum doloremque nam ut distinctio tempora maxime! In, rem. Incidunt magnam id magni tenetur delectus?</p1>
+    <br>
+    <p2>My Name is Ankit Kafle and whats yours</p2>
+
+    <hr>
+    <!--Eg for internal sheet css ie using <style> element in head section-->
+
     <p3>Krishna is the reservior of all pleasure</p3>
 
     <!-- If there is a p4 and by using external css we use color function to make it red and internal css to make it purple. Now which will work ?. The ans is that the line (either <link rel="stylesheet"...> or <style>..</style> ) which is on the top of the program will be executed first and which is at down will executed last and the fun fact is that which was exucuted at last gives the result -->
-     <p4> No God  No   peace
-         Know God Know Peace </p4>
+    <p4> No God No peace
+        Know God Know Peace </p4>
 
-         <!--This inlined css should be mostly avoided -->
+    <!--This inlined css should be mostly avoided -->
+    <br>
+    <p5 style="color:blue">Govinda</p5>
+
+    <hr>
+    <h2>Topic 2</h2>
+
+    <section id="second" class="Ankit">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae necessitatibus
+        quaerat explicabo dolores dolor. Recusandae praesentium soluta alias saepe iusto?<span> Debitis optio quaerat
+            quisquam ullam</span> repellendus quas iusto fugit cupiditate.</section>
+    <br>
+    <br>
+    <section id="third" class="Kafle"> Recusandae <span class="highlight">praesentium</span> soluta alias saepe
+        iusto?<span> Debitis optio quaerat quisquam ullam</span> repellendus quas iusto fugit cupiditate.</section>
+    <br>
+
+    <p class="hero">Krishna is the supreme controller</p>
+
+    <!--Topic 3-->
+
+    <section id="a1">Hi my name is Ankit and i am still learning CSS</section>
+    <section id="a2">CSS is very complex to memorize</section>
+
+    <!-- Topic 4 -->
+    <header>
+        <h3> Eagle Observation</h3>
+    </header>
+    <main>
+        <p id="a3">I really wanna see you...I really wanna a feel you.... George Harrison song ....My sweet Lord</p>
+        <p id="a4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda expedita libero placeat quasi
+            similique, dicta fugit rem. Ea nobis, error dolorem veniam quasi omnis alias provident laudantium architecto
+            blanditiis vel!</p>
+
+        <!--Topic 5-->
+        <h4>I See the Shadow in my past</h4>
+        <h5> I See the reflection in my future</h5>
+        <p id="circle"> </p>
+
+        <!--Topic 6-->
+        <h5> CSS TYPOGRAPHY</h5>
+        <div> A red little fox jump in the bush and got nothing</div>
+        <form>
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="Your Name">
+            <button>Submit</button>
+        </form>
+
+        <!-- Topic 7 -->
+        <h6>Linking</h6>
+        <p>Welcome to my page about <a href="../CSS Practise/Mini project/one.html">Summer</a></p>
+        <p>Time is running fast this <a href="../CSS Practise/Mini project/two.html">winter</a></p>
+
+    </main>
+    <!--Topic 8-->
+    <ol start="6" reversed>
+        <li>step one</li>
+        <li>step two</li>
+        <li value="45">step three</li>
+        <li>step four</li>
+    </ol>
+
+    <ul>
+        <li>step one</li>
+        <li>step two</li>
+        <li>step three</li>
+        <li>step four</li>
+    </ul>
+
+    <!-- Topic 9 -->
+    <nav id="Mellow">My sweet <span class="hi">lord</span></nav>
+
+    <!-- The Nav part is located in Mini projeCT fOlder-->
+
+    <!-- Topic 10-->
 <br>
-         <p5 style="color:blue">Govinda</p5>
 
-         <hr>
-         <h2>Topic 2</h2>
-
-         <section id="second" class="Ankit">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae necessitatibus quaerat explicabo dolores dolor. Recusandae praesentium soluta alias saepe iusto?<span> Debitis optio quaerat quisquam ullam</span> repellendus quas iusto fugit cupiditate.</section>
+ <section class= "look">
+    <div class="block left">Float</div>
+    
+    <!-- p*5>lorem 20      it is short hand method to write many dummy paragraph-->
+    
+     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa nostrum fugiat commodi sunt molestias aut illum repudiandae, voluptas rerum praesentium saepe consectetur! Nihil perspiciatis magnam illum veniam delectus. Ab, laudantium?</p>
+     </section>
+     <div class="clear"></div>
+     <p>Sequi, quod! Distinctio expedita quae vero culpa quia alias ad et. Iusto sed eligendi cumque perferendis fuga sint, natus ratione nam tempore mollitia hic impedit commodi quibusdam perspiciatis ipsa consequuntur?</p>
+     <div class="block right">Float</div>
+     <p>Dignissimos unde deleniti perspiciatis facilis eligendi, laudantium earum natus ipsa corrupti voluptas sapiente aut excepturi cupiditate assumenda ducimus in, amet alias cumque! Perspiciatis rem voluptatum obcaecati similique reiciendis dolores harum?</p>
+     <p>Maxime non laborum nisi esse aut! Debitis, quia! Quasi amet porro hic quia, voluptatem ullam rem nulla? Odio veniam eum consectetur, iste nostrum mollitia, suscipit nam, illum amet consequatur nemo.</p>
+     <p>Eos ratione excepturi quod magni dignissimos nobis soluta ducimus error provident deleniti quia totam veritatis adipisci ut dolorem dolorum veniam, inventore doloribus. Error at, nesciunt veritatis minus voluptatem itaque rerum.</p>
 <br>
-<br>
-         <section id="third" class="Kafle"> Recusandae <span class="highlight">praesentium</span> soluta alias saepe iusto?<span> Debitis optio quaerat quisquam ullam</span> repellendus quas iusto fugit cupiditate.</section>
-<br>
+<hr>
 
-<p class="hero">Krishna is the supreme controller</p>
+<!-- Topic 11 -->
+ <section class="columns">
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis ut rem fugit, sequi accusamus obcaecati cumque sint ratione voluptate autem!</p>
+    <p>Esse, ratione? Mollitia, esse ipsum. Reprehenderit fugit asperiores atque! Veniam optio nostrum beatae neque aut deserunt temporibus porro velit tempore!</p>
+    <h class="head">Next Topic</h2>
+        <p class="quote">&#8220;we should eat to live, but not live to eat&#8221; &#8212;<span class="nowrap"> HIS DIVINE GRACE AC BHAKTISIDDHANTA SWAMI SRILA PRABHUPADA </span></p>
+    <p>Unde ducimus iusto deleniti distinctio, ut animi beatae totam nulla omnis esse qui quod hic eius, autem, voluptas ea fuga.</p>
+    <p>Exercitationem reiciendis labore nulla ullam dicta odio, at animi consequuntur dolorem a atque est, cum corrupti, quia error earum nisi!</p>
+    <p>Eveniet, molestias id! Iste illum odio quam optio, eius nemo natus voluptatibus reiciendis atque quas voluptatem iure assumenda rerum? Rem?</p>
+ </section>
 
-<!--Topic 3-->
 
-<section id="a1">Hi my name is Ankit and i am still learning CSS</section>
-<section id="a2">CSS is very complex to memorize</section>
-
-<!-- Topic 4 -->
- <header>
- <h3> Eagle Observation</h3>
- </header>
- <main>
-    <p id="a3">I really wanna see you...I really wanna a feel you.... George Harrison song ....My sweet Lord</p>
-    <p id="a4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda expedita libero placeat quasi similique, dicta fugit rem. Ea nobis, error dolorem veniam quasi omnis alias provident laudantium architecto blanditiis vel!</p>
-   
-   <!--Topic 5-->
-    <h4 >I See the Shadow in my past</h4>
-    <h5> I See the reflection in my future</h5>
-    <p id="circle"> </p>
-
-    <!--Topic 6-->
-    <h5> CSS TYPOGRAPHY</h5>
-    <div> A red little fox jump in the bush and got nothing</div>
-    <form>
-    <label for="name">Name</label>
-    <input id="name" type="text" placeholder="Your Name">
-    <button>Submit</button>
-    </form>
- </main>
 </body>
+
 </html>
