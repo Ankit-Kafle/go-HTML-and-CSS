@@ -528,3 +528,64 @@ inherit: Inherits the value from its parent. */
 .nowrap{
     white-space: nowrap;
 }
+
+/* Topic 12
+POSITION */
+
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+.outer-container{
+
+    border: 3px dashed #000;
+    width:75vw;
+    height: 85vh;
+    margin:40px auto;
+    position: relative;
+}
+
+.inner-container{
+    border: 2px solid #00f;
+    width: 40vw;
+    height: 50vh;
+    margin: 200px auto;
+}
+
+/*position:static --> It is the default of all elements.Elements are in static already*/
+
+/* absolute positioning i.e(position:absolute) needs a relative parent, if it doesn't have an ancestor element that is positioned relative, then it takes the inital boundary/box which is esentially the browser window */
+
+/* Any block over the another block is decided by what element comes first and what element comes last in html. we can also do by using css easily by using function z-index:1; in any box we want to highlight*/
+
+.absolute{
+    background-color: #00f;
+    position: absolute;
+      top: 0;  
+     left: 0; 
+    z-index: 1;
+}
+
+.relative{
+    background-color: burlywood;
+    position: relative;
+    top:300px;
+    left: 100px;
+}
+
+.fixed{
+    background-color: green;
+    position: fixed;
+    top:100px
+}
+
+.sticky{
+    background-color: azure;
+    position: sticky;
+    top: 0;
+}
+
+
+
