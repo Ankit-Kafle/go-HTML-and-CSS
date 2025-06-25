@@ -686,3 +686,91 @@ flex-grow: 1;
 /*align self will overwrite the value you set in the align item on the container
 eg:  mitem-1{ align-self:center;  }
 */
+
+
+/* Topic-14*
+ CSS GRID   /
+ 
+ /* grid (short for CSS Grid Layout) is a powerful layout system used to create two-dimensional layouts on the web. It lets you design webpages by dividing a container into rows and columns, giving you full control over where items are placed. 
+ display: grid;	Makes the element a grid container.
+grid-template-columns	Defines the number and size of columns.
+grid-template-rows	Defines the number and size of rows.
+gap or grid-gap	Adds space between rows/columns.
+grid-column	Controls an item’s position across columns.
+grid-row	Controls an item’s position across rows.
+place-items, justify-items, align-items	Aligns content inside grid.*/
+
+/* margin:0;   padding:0;    box-sizing:border-box; */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.op{
+    font-family: sans-serif;
+    min-height: 100vh;
+}
+
+.paranoid{
+    display: grid;    /* all of these div instantly become grid items but it will not make any changes*/
+   /* grid-auto-flow: column;   BY USING THIS FUNCTION WE CANNOT HAVE MUCH MORE CONTROL OVER THE COLOUMNS PROPERTY*/ 
+   grid-template-columns: 200Px 100px 200px; 
+  /* WE CAN USED THIS TO HAVE MORE CONTROL OVER COLUMN PROPERTY
+   First column: 200px wide
+
+Second column: 100px wide
+
+Third column: 200px wide
+*/
+   /* SHORT HAND FOR IDENTICAL PROPERTIES
+    grid-template-columns: repeat(2,1,2)
+   grid-template-columns: repeat(2, 1fr 2fr); /* total of 4 columns: 1fr 2fr 1fr 2fr
+   repeat() takes a number, not a length unit like px, as the first argument.
+   Also, when using repeat(), the second argument should be a single track definition or a comma-separated list wrapped in square brackets, but this only works from CSS Grid Level 2 */
+    
+   /* FOR ROWS*/
+   grid-auto-rows: minmax(150px,auto); /*or 200px*/
+    
+   row-gap: 1rem;
+   column-gap: 1rem;
+   /* The spaces are essentially called the gutters
+   the shorthand for gap is [ gap: 1em 0.5em;] */
+
+}
+.box{
+    background-color: black;
+    color:white;
+    font-size: 2rem;
+    padding: 0.5rem;
+}
+
+.box:first-child{
+    background-color: blue;
+
+    /* shorthand: grid-row:1/4; */
+    grid-column-start: 1;
+    grid-column-end: 4;  /* now defining how many columns this child takes up and this is based on the lines of the grid. It really spans the first 3 columns */
+   
+   
+ /* shorthand: grid-columns:1/3; */
+    grid-row-start:1;
+    grid-row-end:4;
+
+    display:grid;
+    align-content: center;
+justify-content: center;
+
+/*place-content:end centre  [it is a short hand for align content and justify content . First one is align and the second one is justify ]*/
+    
+}
+
+.box:nth-child(2){
+    background-color:purple;
+   grid-column: 1/5;
+   grid-row: 3/4;
+    
+
+}
+/* grid is calculating where to put everything that we do not explicitly tell it to. Just like in flexbox, flex item could also be a flex container we can do that with grid also. We can nest a grid inside of a grid item. */
