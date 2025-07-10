@@ -1,0 +1,38 @@
+.body{
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+min-height: 100vh;
+background-color: aliceblue;
+
+background-image: url(../images/bubbles.png),
+linear-gradient(to right, steelblue,purple,white);
+background-repeat: repeat-y;
+background-position: right center;
+
+/*   background shorthand  */
+background: repeat-y right center url("../images/bubbles.png"), no-repeat linear-gradient(to right, steelblue,purple,white);
+background-size: 20%,auto;  
+}
+
+.clip{
+    font-weight: 800;
+    font-size: 18rem;
+    text-align: center;
+    background-image: url(../images/Mayapur.png);
+    background-size: 110%; /*we can see the full img*/
+    text-transform: uppercase;
+
+
+/* By doing this we will see img in our text*/
+    -webkit-background-clip: text;
+    color: rgba(0, 0, 0, 0.244);
+    /* color: transparent; */
+
+
+background-clip: text;  /* this img in text will not be working in firebox ,wewould need to use fallback for when it is not supported in browser and otherwise we need to have this*/
+
+}
+
+
+
+
+

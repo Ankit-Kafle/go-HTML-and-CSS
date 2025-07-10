@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+img {display:block;}
+
+.h1{
+    font-size: 250%;
+    color:aliceblue;
+    text-shadow: 2px 2px 5px greenyellow; /*that 2px first one represent x axis and 2nd one 2px repr y axis and that 5px repr blurr value*/
+background-color: rgba(226, 43, 186, 0.231);
+border-radius: 10px;;
+
+}
+/* End Reset */
+
+/* Utility Classes*/
+.nowrap{
+    white-space: nowrap;
+    display:flex;
+    justify-content: center;
+}
+
+.OffScreen{       /* this is where we define name of our items on the pg but also we have to apply these to each item */
+    position: absolute;  
+    left: -10000px;
+}
+/* End Utility classes*/
+
+
+
+/*  EXAMPLE 1*/
+
+/* img{
+    display: block;
+}
+
+body{
+    font-family: sans-serif;
+    min-height: 100vh;
+}
+
+.Example1{
+    margin-top: 1 rem;
+     padding-left: 20px;
+    border: 1px solid red;
+
+}
+
+.Example1 img{
+    width: 25%;  /* width is25% means the img will occupy the 25% of the container size
+    height: auto;
+} */
+
+.hero{
+    border-bottom: 2px solid #000;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    background-color:rgba(127, 255, 212, 0.331);
+    background-image: url(../images/logo.png);
+
+    background-repeat: repeat-y; /* controls how a bg img is repeated (or not repeated) within an element*/
+    background-size: cover; /* cover-full img haldinxa of bg img*/
+    /* background-size: contain; */
+    background-position: center ; /* it moves the img og background, it has x and y as well*/
+}
+
+.profile-pic-fig{
+
+    width: 30%;
+}
+.profile-pic-fig img{
+
+    width: 100%;
+    height: auto;
+    min-width: 100px;
+    border: 5px double gray;
+    border-radius: 50%;
+
+}
