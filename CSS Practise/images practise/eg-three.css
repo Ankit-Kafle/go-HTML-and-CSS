@@ -4,6 +4,9 @@ min-height: 100vh;
 background-color: aliceblue;
 
 background-image: url(../images/bubbles.png),
+
+/* background-image: radial-gradient(whitesmoke,green); this will always start from the center*/
+
 linear-gradient(to right, steelblue,purple,white);
 background-repeat: repeat-y;
 background-position: right center;

@@ -1,0 +1,149 @@
+/*  Media Queries in Css are a powerful feature that allows your webpage to adapt to different screen sizes,resolution and devices. They are essential for building responsive web design, which look good on mobile phones,tablets,laptops and desktops
+
+It allow you to modify your site based on specific characterstics and parameter and most often we look at the browser viewport with. This is key to responsive design as our web page will respond to the width of a device vieport*/
+
+
+/*
+potrait: It means height is more than the width
+landscape: width is more than the height
+*/
+
+
+/*
+syntax::
+
+@media media type and (condition:breakpoint){
+    // CSS rules
+}
+
+media type: in this we can do (screen) which is very much common ant other like all,print,speech etc
+
+condition: you can put min-width, max-width. 
+
+breakpoint: we put pixels here 
+
+example:
+1.)
+ @media screen and ( min-width: 481px){
+}
+
+all of our style before this media quesry would be applied until we got to 481 px and they would still be applied unless we were to overwrite them because the cascade still works. Other style would be applied if they are written before media query
+
+2.)
+@media screen and  (min-aspect-ration: 7/4){
+}
+
+3.)
+@media screen and (orientation: landscape)
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 1.5 rem sans-serif ;
+    min-height: 100vh;
+    background-color: #475569;
+    background-image: radial-gradient(whitesmoke,#475569);
+    display: flex;
+    flex-direction: column;
+}
+
+header,nav,main,footer {
+    display: grid;
+    place-content: center;
+    grid-template-columns: 100%;
+    text-align: center;
+}
+
+header,footer{
+    position: sticky;
+    background-color: #1E293B;
+    color: whitesmoke;
+}
+
+header{
+    top: 0;
+}
+
+nav{
+    background-color: white;
+    color: red;
+    padding: 0.5rem;
+    border-bottom: 2px solid #000;
+}
+
+main{
+    flex-grow: 1;
+}
+
+footer{
+    bottom:0;
+}
+
+nav{
+    display: none;
+}
+
+
+/* || Small */
+@media screen and (min-width:576px){
+    body{
+        background-color: greenyellow;
+        background-image: radial-gradient(whitesmoke,greenyellow);
+
+    }
+}
+
+
+/* || Medium */
+@media screen and (min-width:768px){
+    body{
+        background-color: goldenrod;
+        background-image: radial-gradient(whitesmoke,goldenrod);
+
+    }
+}
+
+
+/* || Large */
+@media screen and (min-width: 992px){
+    body{
+        background-color: firebrick;
+        background-image: radial-gradient(whitesmoke,firebrick);
+
+    }
+}
+
+
+/* || XL */
+@media screen and (min-width:1200px){
+    body{
+        background-color: rebeccapurple;
+        background-image: radial-gradient(whitesmoke, rebeccapurple);
+
+    }
+}
+
+
+/* || mobile device landscape */
+@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4){
+    body{
+        background-color: dodgerblue;
+        background-image: radial-gradient(whitesmoke, dodgerblue);
+
+    }
+
+    nav{
+        display: none;
+    }
+
+h1,h2{
+    font-size: 1.5rem;
+}
+
+}
+
