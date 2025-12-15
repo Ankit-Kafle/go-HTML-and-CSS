@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 1.5rem;
+    font-family: 'Nunito',sans-serif;
+
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+main{
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+div{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    display: grid;
+    place-content: center;
+}
+
+div:first-child{
+    background-color: dodgerblue;
+    /* transform: translateX(-50%); */
+    /* transform: rotateX(180deg);*/
+   /* transform: scaleX(120%);it only expanded on the horizontal plane here to the left snd right not up and down at all*/
+/* transform: skewX(-10deg); */
+
+} 
+div:nth-child(2){
+    background-color: yellow;
+    /* transform: translateY(-0.90rem);*/
+    /* transform: rotateY(180deg); */
+    /* transform: scaleY(120%); */
+    /* transform: skewY(10deg); */
+}
+
+div:last-child{
+    background-color: limegreen;
+    /* transform: rotateZ(45deg); it is rotating clockwise with a positive number*/
+/* transform: translate(100%,-5rem); */
+/* transform: rotate(78deg); */
+/* transform: scale(50%,50%); */
+/* transform: skew(-10deg,-10deg); */
+}
+
+div:hover{
+    background-color: midnightblue;
+   transition-property: background-color,transform;
+    transition-duration: 2s,1s;
+    transition-delay: 1s;
+    /* transition: all 2s linear 1s; it is shortcut for above things*/
+    transition-timing-function: ease; /*ease: it starts slow and them it speeds up and then once again it slow down at the end. The opposite of ease is linear,so it does everything at even pace */
+}
+/* if you put two transitions together than that transition delay doesnot go between the transitions it's just before it starts*/
+div:last-child:hover{
+transform: rotate(180deg);     /*using this transform property with respect to div:hover above for last child. we can see two value for transition duratiom, the second value is for this transform property of last child*/
+}
+
+.animate{
+    animation-name: slide;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s;
+    animation-iteration-count: 5;
+    /* animation-direction: alternate; */
+    animation-fill-mode: forwards;/*it keep the ending state*/
+    /*animation: 5s ease-in-out 1s 2 normal forward slide;  shorthand*/
+}
+
+/*but this propert itself wont apply the animation we need to define the keyframes for the animation*/
+@keyframes slide{
+    /*at zero percent essentially at the begining of the animation we will transform,translate...*/
+    0%{
+        transform:translateX(0);
+    }
+
+33%{
+    transform: translateX(300px) rotate(180deg);
+}
+
+66%{
+    transform: translateX(-300px) rotate(-180deg);
+}
+
+100%{
+    transform: translateX(0) ;
+    background-color: rebeccapurple;
+}
+
+}
